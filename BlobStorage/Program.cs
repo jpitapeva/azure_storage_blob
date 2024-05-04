@@ -5,7 +5,7 @@ namespace BlobStorage
 {
     public static class Program
     {
-        private static string connectionString = "DefaultEndpointsProtocol=https;AccountName=CHANGEME;AccountKey=CHANGEME;EndpointSuffix=core.windows.net";
+        private static string connectionString = "DefaultEndpointsProtocol=https;AccountName=CHANGE_ME;AccountKey=CHANGE_ME;EndpointSuffix=core.windows.net";
         private static string containerName = "joao"; //add in azure portal 
         private static string blobName = "files.txt";  //image.png //doc.pdf
         private static string filePath = "C:\\temp";

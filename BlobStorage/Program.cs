@@ -5,10 +5,12 @@ namespace BlobStorage
 {
     public static class Program
     {
-        private static string connectionString = "DefaultEndpointsProtocol=https;AccountName=youraccountname;AccountKey=youraccountkey;EndpointSuffix=core.windows.net";
-        private static string containerName = "joao";
+        private static string connectionString = "DefaultEndpointsProtocol=https;AccountName=CHANGEME;AccountKey=CHANGEME;EndpointSuffix=core.windows.net";
+        private static string containerName = "joao"; //add in azure portal 
         private static string blobName = "files.txt";  //image.png //doc.pdf
-        private static string filePath = "C:\\temp\\arquivoQueQueroSalvar.txt";
+        private static string filePath = "C:\\temp";
+        private static string fileName = "arquivoQueQueroSalvar.txt"; //arquivoQueQueroSalvar.png //arquivoQueQueroSalvar.pdf
+        private static string fileFullPath = Path.Combine(filePath, fileName);
 
         static async Task Main(string[] args)
         {
@@ -23,16 +25,16 @@ namespace BlobStorage
 
         static async Task Upload(BlobClient blobClient)
         {
-            // Write text to the file
-            await File.WriteAllTextAsync(filePath, "Hello, World!");
+            // Rewrite text to the file
+            //await File.WriteAllTextAsync(fileFullPath, "Hello, World3!");
 
-            await blobClient.UploadAsync(filePath, true);
+            await blobClient.UploadAsync(fileFullPath, true);
             Console.WriteLine("Blob uploaded successfully");
         }
 
         static async Task Download(BlobClient blobClient)
         {
-            string downloadFilePath = filePath.Replace("teste.txt", "DOWNLOADED.txt");
+            string downloadFilePath = fileFullPath.Replace(fileName, "DOWNLOADED.txt");
             await blobClient.DownloadToAsync(downloadFilePath);
             Console.WriteLine("Blob download successfully");
         }

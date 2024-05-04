@@ -24,7 +24,7 @@ namespace BlobStorage
         static async Task Upload(BlobClient blobClient)
         {
             // Write text to the file
-            await File.WriteAllTextAsync(filePath, "Hello, World33!");
+            await File.WriteAllTextAsync(filePath, "Hello, World!");
 
             await blobClient.UploadAsync(filePath, true);
             Console.WriteLine("Blob uploaded successfully");

@@ -6,8 +6,8 @@ namespace BlobStorage
     public static class Program
     {
         private static string connectionString = "DefaultEndpointsProtocol=https;AccountName=youraccountname;AccountKey=youraccountkey;EndpointSuffix=core.windows.net";
-        private static string containerName = "itext";
-        private static string blobName = "itext";
+        private static string containerName = "joao";
+        private static string blobName = "files.txt";  //image.png //doc.pdf
         private static string filePath = "C:\\temp\\teste.txt";
 
         static async Task Main(string[] args)

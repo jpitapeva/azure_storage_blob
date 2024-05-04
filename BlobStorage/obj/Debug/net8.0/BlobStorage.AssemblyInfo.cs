@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlobStorage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1678ccca7289b0a53b2271d285ccdbfd99e227be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78d837b517d1d91f84e83ae28d9cf4546689d186")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlobStorage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlobStorage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
